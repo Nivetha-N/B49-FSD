@@ -1,0 +1,25 @@
+1. Write a blog on Difference between HTTP1.1 vs HTTP2
+
+HTTP1.1 - It has unique features over previous version which focuses on improvising connection stability. Key features are, 
+ -->Pipelining
+ -->Cache control & maintainence
+ -->content negotiation
+HTTP2 - this protocol is designed to speed up the transfer. 
+
+
+2. Write a blog about objects and its internal representation in Javascript
+
+Objects are the un-orderded collection of data in the form of "key-value " pairs.Keys can be the variable that describes the properties of objects 
+
+example :
+
+var myCar={
+name:"HondaCity",
+color:"Red",
+seater:"5-seater",
+engine:"petrol,
+year:2000,
+isGood:true
+}
+
+values can be accessed with property name. Like, myCar.name will output the value"HondaCity".
