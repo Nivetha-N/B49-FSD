@@ -1,0 +1,46 @@
+Qn 1: Evry kth character in a string should be replaed by its uppercase.
+      
+Code:
+
+let userInput=['abcdefghijk 4']
+let gvn=userInput[0].split(" ")
+
+let str=gvn[0],k=+(gvn[1])
+let temp=[],result=[];
+
+for(let i=0;i<str.length;i=i+k){
+        let a=str.slice(i,i+k)
+       temp.push(a)
+   }
+for(let i=0;i<temp.length;i++){
+let arr=temp[i];
+if(arr.length == k){
+let b=arr.slice(0,-1) + arr.charAt(arr.length-1).toUpperCase();
+  result.push(b);
+}
+else{
+let b=arr.slice(0,arr.length);
+result.push(b);
+}
+}
+console.log(result.join(""))
+
+output: abcDefgHijk
+
+Qn 2: Extract vowels in each wrd
+
+let userInput=['i am here to lear fsd']
+let gvn=userInput[0].split(" ");
+let result =[];
+for(let i=0;i<gvn.length;i++){
+    let temp=gvn[i];
+    let tempArr=[];
+    for(let j=0;j<temp.length;j++){
+        if(temp[j]=='a'|| temp[j]=='e'|| temp[j]=='i'|| temp[j]=='o'||temp[j]=='u')
+        tempArr.push(temp[j]);
+    }
+    result.push(tempArr.join(""));
+}
+console.log(result.join(" "));
+
+output:i a ee o ea
