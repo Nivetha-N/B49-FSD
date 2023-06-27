@@ -1,0 +1,28 @@
+1. to compare two objects having same properties without any order
+      a. let obj1 = { name:"Person1",age:5}
+      b. let obj2 = { age:5,name:"Person1"}
+
+let obj1={name:"Person1",age:5}
+let obj2={age:5,name:"Person1"}
+
+let flag=false;
+
+// checks for the numbers of keys in both objects
+if(Object.keys(obj1).length === Object.keys(obj2).length)
+{
+  for(const key in obj1){
+    //checks for the obj1 keys in Obj2 and if key matched then checks for corresponding value 
+    if(obj2.hasOwnProperty(key) && obj1[key]=== obj2[key]){
+      flag=true;
+    }
+    else
+    flag=false;
+  }
+  if(flag)
+  console.log("same objects");
+  else
+  console.log("different objects");
+}
+else
+console.log("different objects..!!");
+ 
