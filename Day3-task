@@ -26,3 +26,65 @@ if(Object.keys(obj1).length === Object.keys(obj2).length)
 else
 console.log("different objects..!!");
  
+2. Using the given rest API URL, displaying all the country flags in the console.
+
+<html>
+    <head>
+        <title>XMLHttpRequest</title>
+    </head>
+    <body>
+        <script>
+            let xhr= new XMLHttpRequest();
+            
+            let method= "GET";
+            let url="https://restcountries.com/v3.1/all";
+
+            xhr.open(method,url);
+
+            xhr.onload=function () {
+                if(xhr.status === 200){
+                    console.log(xhr.responseText);
+                    var result=JSON.parse(xhr.responseText);
+                    for(var i in result){
+                        console.log(result[i].flag);
+                    }
+                }
+                else
+                console.log("Request failed",xhr.status);
+            }
+
+            xhr.send();
+        </script>
+    </body>
+</html>
+
+3. Using the above URL, print county name, region, subregions and populations in the console.
+<html>
+    <head>
+        <title>XMLHttpRequest</title>
+    </head>
+    <body>
+        <script>
+            let xhr= new XMLHttpRequest();
+            
+            let method= "GET";
+            let url="https://restcountries.com/v3.1/all";
+
+            xhr.open(method,url);
+
+            xhr.onload=function () {
+                if(xhr.status === 200){
+                    console.log(xhr.responseText);
+                    var result=JSON.parse(xhr.responseText);
+                    for(var i in result){
+                        console.log(result[i].name.common +"  "+result[i].region+"  "+result[i].subregion+"  "+result[i].population);
+                    }
+                }
+                else
+                console.log("Request failed",xhr.status);
+            }
+
+            xhr.send();
+        </script>
+    </body>
+</html>
