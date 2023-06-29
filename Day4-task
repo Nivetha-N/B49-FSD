@@ -1,0 +1,199 @@
+Qn.1 Programs using IIFE functions
+
+<html>
+  <head>
+    <title>IIFE function</title>
+  </head>
+  <body>
+    <script>
+    //your JS code goes here
+
+    //Return all the palindromes in a array
+
+    (function(){
+    let arr=[303,525,896,121,205,437]
+    for(let i in arr){
+        let temp= arr[i].toString();
+        temp=temp.split("").reverse().join("");
+        if(temp == arr[i])
+        console.log(arr[i]);
+    }
+    })();
+
+
+    </script>
+  </body>
+</html>
+
+//Individual function can be placed inside script tag
+
+// To print odd numbers in an array
+
+(function(){
+  let arr=[1,2,3,4,5,6]
+  for(let i in arr){
+    if(arr[i] % 2 !=0)
+    console.log(arr[i]);
+    }
+})();
+
+//Convert all strings to title caps in string array
+
+(function(){
+      let toys= ["car","ball","blocks","dolls","musicboard"]
+      console.log("Before: ",toys)
+      let arr=toys;
+      for(let i in arr){
+        arr[i]=arr[i].charAt(0).toUpperCase()+arr[i].slice(1);
+        }
+        console.log("After: ",arr);
+        
+})();
+
+//Sum of all numbers in a array
+
+(function(){
+  let arr=[1,2,3,4,5,6]
+      let sum=0;
+        for(let i in arr){
+          sum+=arr[i];
+        }
+        console.log(sum);
+})();
+
+//Return all the prime nos in a array
+
+(function(){
+  let arr=[4,5,6,7,8,9,11],flag=false
+        for(let i in arr){
+          if(arr[i]<=2)
+            console.log(arr[i]);
+          else{
+          for(let j=2;j<arr[i];j++){
+            if(arr[i]%j !=0)
+            flag=true
+            else
+            flag=false
+            break;
+          }
+          if(flag)
+          console.log(arr[i]);
+          }
+        }
+})();
+
+//Return all the palindromes in a array
+
+(function(){
+    let arr=[303,525,896,121,205,437]
+    for(let i in arr){
+        let temp= arr[i].toString();
+        temp=temp.split("").reverse().join("");
+        if(temp == arr[i])
+        console.log(arr[i]);
+    }
+    })();
+
+
+// To remove duplicates in an array
+
+(function(){
+let toys= ["car","ball","blocks","dolls","musicboard","dolls","car"]
+let unique=[]
+for(let i in toys){
+  if(unique.indexOf(toys[i])== -1)
+    unique.push(toys[i]);
+}
+console.log(unique);
+})();
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Qn 2. using arrow function
+
+
+<html>
+  <head>
+    <title>Practice</title>
+  </head>
+  <body>
+    <script>
+     
+     // To print odd numbers in an array
+     let a=[1,2,3,4,5,6]
+
+      let oddNumbers=(arr) =>{
+          for(let i in arr){
+              if(arr[i] % 2 !=0)
+              console.log(arr[i]);
+          }
+      }
+
+      oddNumbers(a);
+
+      //Convert all strings to title caps in string array
+
+      let toys= ["car","ball","blocks","dolls","musicboard"]
+      console.log("Before: ",toys)
+      let titleCaps=(arr) =>{
+          for(let i in arr){
+            arr[i]=arr[i].charAt(0).toUpperCase()+arr[i].slice(1);
+          }
+          return arr.join(",");
+      }
+
+      console.log("After: ",titleCaps(toys));
+
+      //Sum of all numbers in a array
+
+      let sum=0;
+      let sumOfNumbers=(arr) => {
+        for(let i in arr){
+          sum+=arr[i];
+        }
+        return sum;
+      }
+      console.log(sumOfNumbers(a));
+
+      //Return all the prime nos in a array
+
+      let b=[4,5,6,7,8,9,11],flag=false
+
+      let primeNos=(arr) =>{
+        for(let i in arr){
+          if(arr[i]<=2)
+            console.log(arr[i]);
+          else{
+          for(let j=2;j<arr[i];j++){
+            if(arr[i]%j !=0)
+            flag=true
+            else
+            flag=false
+            break;
+          }
+          if(flag)
+          console.log(arr[i]);
+          }
+        }
+      }
+      primeNos(b);
+
+    //Return all the palindromes in a array
+
+    let c=[303,525,896,121,205,437]
+
+    let isPalindrome=(arr) => {
+      for(let i in arr){
+        let temp= arr[i].toString();
+        temp=temp.split("").reverse().join("");
+        if(temp == arr[i])
+        console.log(arr[i]);
+      }
+    }
+    isPalindrome(c);
+   
+    </script>
+  </body>
+</html>
