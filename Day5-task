@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day5-task</title>
+</head>
+<body>
+    <h2 style="color:cadetblue">Create your own resume</h2>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+let myResume={
+    "personal_details":{
+        "name": "NIVETHA N",
+        "email": "nivenagaraj123@gmail.com",
+        "phone":"+91 9876543210",
+        "degree":"B.E",
+        "location":{
+            "address":"65A-51,Krishna Reddy Layout",
+            "city":"Bangalore",
+            "state":"Karnataka",
+            "Pincode":"560100",
+        },
+        "profiles":{
+            "linkedin":"https://www.linkedin.com/in/nivetha-nagaraj-77a7b2216/",
+            "github":"https://github.com/Nivetha-N/B49-FSD",
+        },
+        "education":[{
+            "institute":"Mepco Schlenk Engineering College",
+            "degree":"B.E/Electronics and Communication",
+            "yearOfPassing":"2021",
+            "courseType":"fulltime",
+        }],
+        "professional_Experience":[{
+            "company":"HCLTech",
+            "designation":"Software Engineer",
+            "startDate":"Sep'21",
+            "endDate":"current",
+        }],
+        "skills":[{
+            "name":"Java,SpringBoot,MySQL,Javascript",
+            "level":"entry-level",
+
+        }],
+        "languages":[{
+            "languages":"Tamil,English",
+        }],
+    }
+}
+console.log(myResume);
